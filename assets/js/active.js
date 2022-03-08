@@ -297,6 +297,112 @@
                     + '<div class="counter-item"><span class="counter-no">%S</span><span class="counter-label">Secs</span></div>'));
             });
         });
+		
+		// Our team slider
+        var teamSlide = $('.team-slider');
+        teamSlide.owlCarousel({
+            loop: true,
+            margin: 30,
+            autoplay: true,
+            autoplayTimeout: 5000,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                },
+                600: {
+                    items: 1,
+                    nav: false
+                },
+                992: {
+                    items: 3,
+                    nav: false,
+                    loop: true
+                },
+                1200: {
+                    items: 4,
+                    nav: false,
+                    loop: true
+                }
+            }
+        });
+
+
+        // Custom team nav buttons
+        $('.slide-left').on('click', function() {
+            event.preventDefault();
+            teamSlide.trigger('prev.owl.carousel');
+        });
+        $('.slide-right').on('click', function() {
+            event.preventDefault();
+            teamSlide.trigger('next.owl.carousel');
+        });
+
+
+        // Our team slider 2
+        var teamSlide3 = $('.team-3-slider');
+        teamSlide3.owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: false,
+            nav: false,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: false,
+                },
+                576: {
+                    items: 1,
+                    nav: false
+                },
+                992: {
+                    items: 3,
+                    nav: false,
+                    loop: true
+                },
+                1200: {
+                    items: 4,
+                    nav: false,
+                    loop: true
+                }
+            }
+        });
+
+
+        // Custom team 2 nav buttons
+        $('.slide-left.team-3').on('click', function() {
+            event.preventDefault();
+            teamSlide3.trigger('prev.owl.carousel');
+        });
+        $('.slide-right.team-3').on('click', function() {
+            event.preventDefault();
+            teamSlide3.trigger('next.owl.carousel');
+        });
+
+
+        // Testimonial slider
+        $('.testimonial-slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: false,
+            dots: false,
+            navText: ["<a class='arrow-btn flex-center'><i class='fas fa-arrow-left'></i></a>", "<a class='arrow-btn flex-center'><i class='fas fa-arrow-right'></i></a>"],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 1
+                }
+            }
+        });
 
 
         //Email Ajax Submission
