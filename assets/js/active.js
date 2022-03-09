@@ -403,6 +403,114 @@
                 }
             }
         });
+		
+		 // Blog listing slider 
+        $('.slider-type-blog').owlCarousel({
+            loop: true,
+            margin: 0,
+            autoplay: true,
+            nav: true,
+            dots: false,
+            autoplayTimeout: 5000,
+            autoplayHoverPause: true,
+            navText: ["<i class='fas fa-arrow-left transform-v-'></i>", "<i class='fas fa-arrow-right'></i>"],
+            responsive: {
+                0: {
+                    items: 1,
+                    margin: 0
+                },
+                1200: {
+                    items: 1
+                }
+            }
+        });
+		
+		/*------------------------------------------------------------------------------*/
+        /*03.Magnific pop up
+/*------------------------------------------------------------------------------*/
+        $('.popup-video').magnificPopup({
+            type: 'iframe'
+        });
+
+
+        $('.gallery-links').magnificPopup({
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+/*------------------------------------------------------------------------------*/
+        /*04.Gallery filtering 
+/*------------------------------------------------------------------------------*/
+        // masonry gallery listing 
+        var $portfolioGrid = $('.portfolio-filter').isotope({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            masonry: {
+                columnWidth: '.grid-sizer'
+            }
+        });
+
+
+        // gallery filtering option buttons 
+        $('.filter-gallery').on('click', 'button', function() {
+            var filterValue = $(this).attr('data-filter');
+            $portfolioGrid.isotope({
+                filter: filterValue
+            });
+        });
+        /*-----------------------------------------------------*/
+        // masonry blog listing 
+        var $gridblog = $('.blog-masonry-div').isotope({
+            itemSelector: '.blog-grid-item',
+            percentPosition: true
+        });
+
+
+        // Blog filtering option 
+        $('.filter-blog').on('click', 'button', function() {
+            var filterValueBlog = $(this).attr('data-filter');
+            $gridblog.isotope({
+                filter: filterValueBlog
+            });
+        });
+
+
+        // gallery & blog page button active style
+        $('.btn-filter').on('click', function(e) {
+            $(this).siblings('.active').removeClass('active');
+            $(this).addClass('active');
+            event.preventDefault();
+        });
+		$( ".each-color.co1" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
+
+$( ".each-color.co2" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
+
+$( ".each-color.co3" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
+
+$( ".each-color.co4" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
+
+$( ".each-color.co5" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
+
+$( ".each-color.co6" ).on('click', function(e) {
+    var data1 = $(this).data('color');
+    $(".color-changing").attr('href', data1);
+});
 
 
         //Email Ajax Submission

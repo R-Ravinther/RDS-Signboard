@@ -762,11 +762,250 @@ text-rendering: optimizeLegibility !important;
     width: 100%;
 	
 }
+/*
+23. Portfolio
+.......................................*/
+
+.portfolio-item-img {
+    position: relative;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    left: 8px;
+    opacity: 0;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    bottom: 8px;
+    z-index: 5;
+    left: 8px;
+    padding: 30px;
+    color: #fff;
+}
+
+.portfolio-overlay:before {
+    position: absolute;
+    content: close-quote;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .9;
+    z-index: 1;
+}
+
+.portfolio-overlay .date {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+}
+
+.portfolio-item-detail {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    right: 30px;
+}
+
+.plus-line-link {
+    position: absolute;
+    right: 0;
+    width: 36px;
+    height: 36px;
+    bottom: 0;
+}
+
+.plus-line-link:before {
+    position: absolute;
+    content: close-quote;
+    height: 36px;
+    width: 1px;
+    background-color: #fff;
+    left: 50%;
+    top: 0;
+}
+
+.plus-line-link:after {
+    position: absolute;
+    content: close-quote;
+    height: 1px;
+    width: 36px;
+    background-color: #fff;
+    left: 0;
+    top: 50%;
+}
+
+.portfolio-item-detail .filtered-name {
+    position: relative;
+    padding-left: 30px;
+}
+
+.portfolio-item-detail .filtered-name:before {
+    position: absolute;
+    content: close-quote;
+    width: 19px;
+    height: 1px;
+    background-color: #fff;
+    left: 0;
+    top: 50%;
+}
+
+.portfolio-item {
+    margin: 0px 15px;
+    margin-bottom: 30px;
+	
+}
+
+.portfolio-item.mar-0 {
+    margin: 0px 0px;
+    margin-bottom: 30px;
+}
+
+.portfolio-filter {
+    margin-left: -15px;
+    margin-right: -15px;
+	margin-bottom: 15px;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item-img img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-item,
+.grid-sizer {
+    width: 100%;
+}
+
+.grid-item {
+    float: left;
+    height: auto;
+	width: 20%;
+	display:block;
+}
+
+.btn-filter {
+    background: none;
+    border: none;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 6px 0px;
+    margin-right: 45px;
+    border-bottom: 2px solid #fff;
+}
+
+.filter-gallery {
+    text-align: center;
+	font-family: 'Merriweather', serif;
+	font-size:16px;
+}
+
+.btn-filter.active,
+.btn-filter:hover {
+    border-bottom: 2px solid;
+}
+
+.btn-filter:last-child {
+    margin: 0;
+    margin: 0px 15px;
+    margin-bottom: 12px;
+}
+
+.portfolio-item-detail h5 a:hover {
+    color: #fff;
+}
+
+
+/* ....................................
+24. Portfolio details
+.......................................*/
+
+.line-right {
+    position: relative;
+}
+
+.line-right:after {
+    position: absolute;
+    content: close-quote;
+    height: 1px;
+    width: 20px;
+    top: 50%;
+    margin-left: 15px;
+}
+
+.case-info p {
+    margin: 0;
+}
+
+.case-quote a {
+    text-decoration: underline;
+}
+
+.each-gallery.case-gallery-links {
+    margin-bottom: 30px;
+}
+.gallery-links {
+    position: relative;
+    display: block;
+}
+
+.each-gallery {
+    margin-right: 12px;
+	
+}
+
+.gallery-links .full-cover {
+    color: #fff;
+	position: absolute;
+}
+
+.each-gallery:last-child {
+    margin: 0;
+}
+
+.gallery-links .full-cover {
+    opacity: 0;
+}
+
+.gallery-links:hover .full-cover {
+    opacity: 1;
+}
+
+.tags-widget .list-inline-item {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 575px) {
     .nice-select {
         width: 160px;
     }
+	.portfolio-item {
+    margin: 0px 15px;
+    margin-bottom: 30px;
+	float:left;
+	display:block;
+	
+}
+.portfolio-item .each-gallery{
+	display:block;
+	float:left;
+}
+.portfolio-item .grid-item .grid-sizer{
+	width:100%;
+	float:left;
+}
 }
 
 .nice-select span.current {
