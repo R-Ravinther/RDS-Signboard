@@ -2064,6 +2064,7 @@ address strong, address b {
     margin-top: 120px;
     justify-content: center;
     width: 100%;
+	position:fixed;
 }
 
 .menu-open {
