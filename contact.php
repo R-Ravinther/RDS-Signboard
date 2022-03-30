@@ -6,13 +6,13 @@ if(isset($_POST['submit'])){
 	$msg = $_POST['msg'];
 	
 	$to = 'rdssigns@rdssignsindia.com';
-	$subject = 'From Enquiry Form';
+	$subject = 'From Contact Form';
 	$message = "Name: ".$name."\n"."Phone: ".$phone."\n\n". "Message: "."\n".$msg;
 	$headers = "From: ".$email;
 	
 	if(mail($to, $subject, $message, $headers)){		
 		echo "<h1>Sent Succesfully! Thank You"." ".$name.", We will Contact you shortly!</h1>";
-		echo '<a href="products.html">Click here</a>';
+		echo '<a href="index.html">Click here</a>';
 		}
 			else{
 				echo "Went wrong!";				

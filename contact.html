@@ -174,33 +174,29 @@
                 <div class="contact-form-wrap">
                     <h2>Request a Quote</h2>
 
-                    <form id="contact-form" action="#" method="post">
+                   <!-- <form id="contact-form" action="contact.php" method="post" autocomplete="off">
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-9">
                                 <div class="single-input-item">
                                     <input type="text" name="name" placeholder="First Name *" required/>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
+                            <div class="col-lg-9">
                                 <div class="single-input-item">
-                                    <input type="text" name="phone" placeholder="Phone Number *" required/>
+                                    <input type="tel" name="phone" placeholder="Phone Number *" required/>
                                 </div>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-lg-6">
+                            <div class="col-lg-9">
                                 <div class="single-input-item">
                                     <input type="email" name="email" placeholder="Email Address *" required/>
                                 </div>
                             </div>
 
-                            <div class="col-lg-6">
-                                <div class="single-input-item">
-                                    <input type="text" name="subject" placeholder="Subject *" required/>
-                                </div>
-                            </div>
+                            
                         </div>
 
                         <div class="row">
@@ -210,15 +206,37 @@
                                               placeholder="Message"></textarea>
                                 </div>
 
-                                <div class="single-input-item text-center">
-                                    <button type="submit" name="submit" class="btn-add-to-cart">Send Meassage</button>
+                                <div class="single-input-item text-center w-50 mr-auto ml-auto" >
+                                   <input type="submit" class="btn btn-danger" style="padding:10px; font-size:16px; color:#000;" value="Submit" name="submit">
                                 </div>
 
                                 <!-- Form Notification -->
-                                <div class="form-messege"></div>
+                               <!-- <div class="form-messege"></div>
                             </div>
                         </div>
                     </form>
+                    -->
+                    <form action="contact.php" method="post" name="form" autocomplete="off">
+                                    <div class="form-group">
+    									<label for="Name">Name</label><span class="danger">*</span>
+    									<input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Enter Name" required>    
+ 										 </div>
+                                         <div class="form-group">
+    									<label for="Phone">Phone</label><span class="danger">*</span>
+    									<input type="tel" class="form-control" id="phone" name="phone" aria-describedby="phone" placeholder="Enter Phone Number" required>    
+ 										 </div>
+										<div class="form-group">
+    									<label for="Email">Email address</label>
+    									<input type="email" class="form-control" id="email" name="email" aria-describedby="email" placeholder="Enter Email">    
+ 										 </div>
+                                         <div class="form-group">
+   										 <label for="Message">Message</label>
+   										 <textarea class="form-control" id="msg" name="msg" rows="3"></textarea>
+ 										 </div>
+  
+  										<input type="submit" class="btn btn-primary" style="padding:10px; font-size:16px" value="Submit" name="submit">
+										
+								</form>
                 </div>
             </div>
             <!-- Contact Form End -->
