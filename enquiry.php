@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	
 	if(mail($to, $subject, $message, $headers)){		
 		echo "<h1>Sent Succesfully! Thank You"." ".$name.", We will Contact you shortly!</h1>";
-		echo '<a href="products.html">Click here</a>';
+		echo '<a href="product.html">Click here</a>';
 		}
 			else{
 				echo "Went wrong!";				
